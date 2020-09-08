@@ -1,0 +1,38 @@
+using System;
+
+namespace Filtro_pares
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Int32 x;
+                String y;
+
+                do
+                {
+                    y = "";
+                    y = Console.ReadLine();
+                    if (y == "")
+                    {
+                        return; 
+                    }
+                    x = Convert.ToInt32(y);
+                    if (x % 2 == 0) 
+                    {
+                        Console.WriteLine(x);
+                    }
+                
+                } while (y != "");      
+                   
+            }
+            catch (System.Exception)
+            {
+                Console.WriteLine();
+                Console.Error.WriteLine();                
+            }
+        }
+    }
+}
