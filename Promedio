@@ -1,0 +1,38 @@
+using System;
+
+namespace Promedio
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                String y;
+                Int32 x, z, a;
+
+                x = 0;
+                a = 0;
+                do
+                {
+                    y = "";
+                    y = Console.ReadLine();
+                    if (y == "")
+                    {
+                        Console.WriteLine(x / a);
+                        Console.WriteLine();
+                        return;
+                    }
+                    z = Convert.ToInt32(y);
+                    x += z;
+                    a++;                
+                } while (y != "");
+            }
+            catch (System.Exception)
+            {
+                Console.WriteLine();
+                Console.Error.WriteLine();
+            }            
+        }
+    }
+}
